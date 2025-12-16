@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency Wallet - USDT (Polygon)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 640px;
+            width: 100%;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .subtitle .token {
+            font-size: 24px;
+            font-weight: 400;
+            color: #ffffff;
+        }
+
+        .subtitle .network {
+            font-size: 24px;
+            font-weight: 500;
+            color: #c026d3;
+        }
+
+        .qr-section {
+            display: flex;
+            justify-content: center;
+            padding: 40px 0 60px;
+        }
+
+        .qr-code {
+            width: 300px;
+            height: 300px;
+            border-radius: 12px;
+        }
+
+        .wallet-section {
+            margin-bottom: 30px;
+        }
+
+        .wallet-section h2 {
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+
+        .address-box {
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+        }
+
+        .address-box code {
+            font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
+            font-size: 16px;
+            color: #ffffff;
+            word-break: break-all;
+        }
+
+        .explorer-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #2a2a2a;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 18px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .explorer-btn:hover {
+            background-color: #3a3a3a;
+        }
+
+        .explorer-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .verification-box {
+            border: 1px solid #3a3a3a;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 40px;
+        }
+
+        .verification-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .verification-header svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .verification-header h3 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .verification-list {
+            list-style: disc;
+            padding-left: 24px;
+        }
+
+        .verification-list li {
+            font-size: 15px;
+            color: #d1d5db;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+
+        .verification-list li:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Cryptocurrency Wallet</h1>
+            <div class="subtitle">
+                <span class="token">USDT (Polygon)</span>
+                <span class="network">Polygon</span>
+            </div>
+        </header>
+
+        <section class="qr-section">
+            <img src="assets/wallet-qr.png" alt="Wallet QR Code" class="qr-code">
+        </section>
+
+        <section class="wallet-section">
+            <h2>Wallet Address</h2>
+            <div class="address-box">
+                <code>0x1d04766A2187e212e62B87975bDDe062E732457e</code>
+            </div>
+            <a href="https://polygonscan.com/address/0x1d04766A2187e212e62B87975bDDe062E732457e" target="_blank" rel="noopener noreferrer" class="explorer-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.385 15.4457C11.7348 17.5684 7.85532 17.4013 5.39854 14.9445C2.7625 12.3085 2.7625 8.03464 5.39854 5.3986C8.03458 2.76256 12.3084 2.76256 14.9445 5.3986C17.4013 7.85538 17.5683 11.7348 15.4457 14.3851L20.6013 19.5407C20.8942 19.8336 20.8942 20.3085 20.6013 20.6014C20.3084 20.8943 19.8335 20.8943 19.5407 20.6014L14.385 15.4457ZM6.4592 13.8839C4.40895 11.8336 4.40895 8.50951 6.4592 6.45926C8.50945 4.40901 11.8336 4.40901 13.8838 6.45926C15.9326 8.50801 15.9341 11.8287 13.8883 13.8794C13.8868 13.8809 13.8853 13.8823 13.8838 13.8839C13.8823 13.8854 13.8808 13.8869 13.8793 13.8884C11.8287 15.9341 8.50795 15.9326 6.4592 13.8839Z" fill="white"/>
+                </svg>
+                View on Explorer
+            </a>
+        </section>
+
+        <section class="verification-box">
+            <div class="verification-header">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.2896 10.5275C24.4962 10.0498 23.5038 10.0498 22.7104 10.5275L21.6778 11.1493C18.9153 12.8127 15.8141 13.8334 12.6037 14.1359L11.9531 14.1972C11.6963 14.2214 11.5 14.437 11.5 14.695V17.9827C11.5 22.9978 13.5361 27.798 17.1418 31.2837L23.6525 37.5777C23.8463 37.7651 24.1537 37.7651 24.3475 37.5777L30.8582 31.2837C34.4639 27.798 36.5 22.9978 36.5 17.9827V14.695C36.5 14.437 36.3037 14.2214 36.0469 14.1972L35.3963 14.1359C32.1859 13.8334 29.0847 12.8127 26.3222 11.1493L25.2896 10.5275ZM21.1628 7.95745C22.9083 6.90644 25.0917 6.90643 26.8372 7.95745L27.8698 8.57924C30.2468 10.0105 32.9153 10.8889 35.6777 11.1491L36.3283 11.2104C38.1262 11.3798 39.5 12.8892 39.5 14.695V17.9827C39.5 23.8111 37.1338 29.3897 32.9434 33.4406L26.4326 39.7346C25.076 41.0461 22.924 41.0461 21.5674 39.7346L15.0566 33.4406C10.8662 29.3897 8.5 23.8111 8.5 17.9827V14.695C8.5 12.8892 9.87385 11.3798 11.6717 11.2104L12.3223 11.1491C15.0847 10.8889 17.7532 10.0106 20.1302 8.57924L21.1628 7.95745Z" fill="white"/>
+                </svg>
+                <h3>Verification Checklist</h3>
+            </div>
+            <ul class="verification-list">
+                <li>Confirm correct blockchain network (Polygon, Ethereum, etc.)</li>
+                <li>Compare last 6 characters with me over a second trusted channel</li>
+                <li>Send small test transaction first</li>
+                <li>Remember: Crypto transactions are irreversible</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
